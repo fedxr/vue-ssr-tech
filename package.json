@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/fedxr/vue-ssr-tech/issues"
   },
-  "homepage": "https://github.com/fedxr/vue-ssr-tech#readme"
+  "homepage": "https://github.com/fedxr/vue-ssr-tech#readme",
+  "devDependencies": {
+    "webpack-cli": "^2.0.14"
+  }
 }
