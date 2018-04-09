@@ -1,7 +1,5 @@
 <template>
-    <div id="test">
-        {{text}}
-    </div>
+    <div id="test">{{text}}</div>
 </template>
 
 <script>
@@ -19,4 +17,3 @@ export default {
     color: red;
 }
 </style>
-

@@ -12,10 +12,13 @@ const config = {
         path: path.join(__dirname, 'dist')
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.vue$/,
                 loader: 'vue-loader'
+            },
+            {
+                test: /\.jsx$/,
+                loader: 'babel-loader'
             },
             {
                 test: /\.css$/,
@@ -29,20 +32,24 @@ const config = {
                 use: [
                     'style-loader',
                     'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
                     'stylus-loader'
                 ]
             },
             {
                 test: /\.(gif|jpg|jpeg|png|svg|ico)$/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            limit: 1024,
-                            name: '[name]-aaa.[ext]'
-                        }
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 1024,
+                        name: '[name]-aaa.[ext]'
                     }
-                ]
+                }]
             }
         ]
     },
@@ -65,8 +72,8 @@ if (isDev) {
             errors: true,
         },
         hot: true
-        // historyFallBack: {},
-        // open: true
+            // historyFallBack: {},
+            // open: true
     }
     config.plugins.push(
         new webpack.HotModuleReplacementPlugin(),
