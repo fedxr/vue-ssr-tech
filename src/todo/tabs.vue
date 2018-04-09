@@ -11,7 +11,7 @@
               {{state}}
           </span>
       </span>
-      <span class="clear" @click="clearAllCompleted">Claer completed</span>
+      <span class="clear" @click="clearAllCompleted">Clear completed</span>
   </div>
 </template>
 
