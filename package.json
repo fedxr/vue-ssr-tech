@@ -1,23 +1,24 @@
 {
-  "name": "vue-ssr-tech",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fedxr/vue-ssr-tech.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fedxr/vue-ssr-tech/issues"
-  },
-  "homepage": "https://github.com/fedxr/vue-ssr-tech#readme",
-  "devDependencies": {
-    "webpack-cli": "^2.0.14"
-  }
+    "name": "vue-ssr-tech",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fedxr/vue-ssr-tech.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/fedxr/vue-ssr-tech/issues"
+    },
+    "homepage": "https://github.com/fedxr/vue-ssr-tech#readme",
+    "devDependencies": {
+        "webpack-cli": "^2.0.14"
+    }
 }
