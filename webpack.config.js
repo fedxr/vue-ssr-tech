@@ -23,7 +23,7 @@ const config = {
                 loader: 'babel-loader'
             },
             {
-                test: /\.(gif|jpg|jpeg|png|svg)$/,
+                test: /\.(gif|jpg|jpeg|png|svg|ico)$/,
                 use: [{
                     loader: 'url-loader',
                     options: {
